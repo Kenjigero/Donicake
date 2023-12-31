@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Happy New Year Donicakes</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+  }
+  h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 0;
+  position: relative; /* Change to relative or static */
+  /* bottom: 0; */ /* Remove this line */
+  width: 100%;
+}
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  header, .container, footer {
+    text-align: center;
+    padding: 20px;
+  }
+  .stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background-color: #ffffff;
+    opacity: 0;
+    box-shadow: 0 0 2px #ffffff;
+    animation: twinkle linear infinite;
+  }
+
+  @keyframes twinkle {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  .cloud {
+    position: fixed;
+    pointer-events: none;
+    animation: moveCloud linear infinite;
+    z-index: -1;
+  }
+
+  @keyframes moveCloud {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  canvas#led-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .led-text {
+    font-size: 2em;
+    color: #ff0000; /* Change LED text color as needed */
+    font-family: monospace;
+    opacity: 0.8;
+    animation: blink 1s step-end infinite;
+    position: absolute;
+  }
+
+  @keyframes blink {
+    from,
+    to {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.2;
+    position: absolute;
+    z-index: -1;
+    animation: float 5s ease-in-out infinite, changeColor 3s infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  .heart {
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d4d; /* Heart color */
+    position: absolute;
+    z-index: -1;
+    animation: floatHeart 6s ease-in-out infinite;
+  }
+
+  @keyframes floatHeart {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(45deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+
+  .floating-element {
+    width: 10px;
+    height: 10px;
+    background-color: #ffc107; /* Floating element color */
+    position: absolute;
+    z-index: -1;
+    animation: floatElement 5s ease-in-out infinite;
+  }
+  @keyframes floatElement {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 767px) {
+  footer {
+    position: relative;
+  }
+  .header{
+    font-size: 2em;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+    <header>
+      <h1>Happy New Year Doni!</h1>
+      <p>Wishing you a year filled with joy, love, and success.</p>
+    </header>
+    <div class="container">
+      <h2>Dear Doni,</h2>
+      <p>As the New Year approaches, I want to express my gratitude and how I am proud to you. I know last year was not for us, we were both busy in our 4th year college life. You're not toxic Doni, I know your career is important to you. I am sorry for being childish,</p>
+      <p>I am proud of your achievements, the one I knows and the things I don't know.</p>
+      <p>I wish this year for you is your safety, good health and good grades.</p>
+      <p>May this New Year be filled with laughter, adventures, and endless love.</p>
+      <br></br>
+      <br></br>
+      <p>Use earphones for here hehehe.</p>
+      <video width="350" height="360" controls>
+        <source src="hi.mp4" type="video/mp4">
+      </video>
+      <p>About us, can we try again since it's a new year ahead of us? I promise you that I will take care of the world so that you can focus on your priorities. I have flaws, I am prone to make mistakes but I can love you that way you want. </p>
+      <p>Can I court you this 2024 with respect to your boundaries? You deserve slow love and pure intentions, you deserve that kind of treatment. I know it will be hard for me since im forcing myself to you but that is fine as long as you are interested.</p>
+      <p>Take the risks for us, I will be your ride or die partner, I will be your partner in crime, I will be your safe place when the world is against you.</p>
+      <p>With all my love,<br>Keni</p>
+      <div class="circle"></div>
+    
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="snowflakes"></div>
+      <div class="shooting-stars"></div>
+    </div>
+    <footer>
+      <button id="fireworksButton" style="padding: 10px 20px; font-size: 1em;">Press me!</button>
+      <p>&copy; Keni | New Year Wishes</p>
+    </footer>
+    <img class="cloud" src="clouds.png" alt="Cloud" style="top: 200px; left: 90%; transform: translateX(-50%); width: 150px;">
+    <img class="cloud" src="clouds.png" alt="Cloud" style="top: 300px; left: 100%; transform: translateX(-50%); width: 150px;">
+    <img class="cloud" src="clouds.png" alt="Cloud" style="top: 400px; right: 70%; transform: translateX(-50%); width: 150px;">
+    <img class="cloud" src="clouds.png" alt="Cloud" style="top: 500px; right: 100%; transform: translateX(-50%); width: 150px;">
+    <img class="cloud" src="clouds.png" alt="Cloud" style="top: 600px; right: 20%; transform: translateX(-50%); width: 150px;">
+    <img class="cloud" src="clouds.png" alt="Cloud" style="top: 700px; right: 10%; transform: translateX(-50%); width: 150px;">
+    <div class="stars"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  
+  <script>
+      const canvas = document.createElement('canvas');
+      document.body.appendChild(canvas);
+      const ctx = canvas.getContext('2d');
+  
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+  
+      const fireworks = [];
+      const particles = [];
+      let hue = 120;
+  
+      function createFirework(x, y) {
+        fireworks.push({
+          x,
+          y,
+          sx: Math.random() * 6 - 3,
+          sy: Math.random() * 3 + 1,
+          brightness: Math.random() * 50 + 50,
+          targetRadius: Math.random() * 90 + 30,
+          radius: 4, // Increase the initial radius for larger fireworks
+          alpha: 1
+        });
+      }
+  
+      function createParticles(x, y) {
+        for (let i = 0; i < 50; i++) {
+          particles.push({
+            x,
+            y,
+            vx: Math.random() * 5 - 2.5,
+            vy: Math.random() * 5 - 2.5,
+            brightness: Math.random() * 50 + 50,
+            alpha: 1,
+            radius: 3 // Increase the initial radius for larger particles
+          });
+        }
+      }
+  
+      function drawFireworks() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+        ctx.globalCompositeOperation = 'screen';
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.globalCompositeOperation = 'lighter';
+  
+        for (let i = 0; i < fireworks.length; i++) {
+          const firework = fireworks[i];
+  
+          ctx.beginPath();
+          ctx.arc(firework.x, firework.y, firework.radius, 0, Math.PI * 2);
+          ctx.closePath();
+          ctx.fillStyle = `hsla(${hue}, 100%, ${firework.brightness}%, ${firework.alpha})`;
+          ctx.fill();
+  
+          firework.x += firework.sx;
+          firework.y -= firework.sy;
+  
+          firework.radius = Math.min(2, firework.radius + 0.05);
+  
+          if (firework.y <= firework.targetRadius) {
+            createParticles(firework.x, firework.y);
+            fireworks.splice(i, 1);
+            i--;
+          }
+        }
+  
+        for (let i = 0; i < particles.length; i++) {
+          const particle = particles[i];
+  
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+          ctx.closePath();
+          ctx.fillStyle = `hsla(${hue}, 100%, ${particle.brightness}%, ${particle.alpha})`;
+          ctx.fill();
+  
+          particle.x += particle.vx;
+          particle.y += particle.vy;
+  
+          particle.radius = Math.max(1, particle.radius - 0.05);
+          particle.alpha -= 0.02;
+  
+          if (particle.alpha <= 0) {
+            particles.splice(i, 1);
+            i--;
+          }
+        }
+  
+        hue += 0.5;
+        requestAnimationFrame(drawFireworks);
+      }
+  
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+  
+      window.addEventListener('resize', resizeCanvas);
+      window.addEventListener('click', (e) => {
+        createFirework(e.clientX, e.clientY);
+      });
+  
+      drawFireworks();
+      const clouds = document.querySelectorAll('.cloud');
+      clouds.forEach(cloud => {
+        const duration = Math.random() * (100 - 20) + 80; // Adjust the duration as needed
+        cloud.style.animationDuration = `${duration}s`;
+      });
+      const starsElement = document.querySelector('.stars');
+  
+      for (let i = 0; i < 100; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        star.style.animationDuration = `${Math.random() * 3 + 1}s`;
+        starsElement.appendChild(star);
+      }
+      function createLEDText() {
+      const ledText = document.createElement('div');
+      ledText.textContent = '';
+      ledText.classList.add('led-text');
+      document.body.appendChild(ledText);
+  
+      // Randomize position within the body
+      ledText.style.left = `${Math.random() * (window.innerWidth - ledText.offsetWidth)}px`;
+      ledText.style.top = `${Math.random() * (window.innerHeight - ledText.offsetHeight)}px`;
+    }
+  
+    const fireworksButton = document.getElementById('fireworksButton');
+  
+  function createMultipleFireworks(x, y) {
+    // You can adjust the number of fireworks here by changing the loop iterations
+    for (let i = 0; i < 100; i++) {
+      createFirework(x, y);
+    }
+  }
+  
+  fireworksButton.addEventListener('click', (e) => {
+    // Get the position of the button relative to the window
+    const rect = fireworksButton.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+  
+    // Create multiple fireworks at the button's position when clicked
+    createMultipleFireworks(x, y);
+  });
+  function createCircles() {
+        const container = document.querySelector('.container');
+        const circles = [];
+  
+        for (let i = 0; i < 100; i++) { // Create 50 circles, change the number as desired
+          const circle = document.createElement('div');
+          circle.classList.add('circle');
+          circle.style.backgroundColor = getRandomColor(); // Set random color
+          circle.style.left = `${Math.random() * window.innerWidth}px`;
+          circle.style.top = `${Math.random() * window.innerHeight}px`;
+          container.appendChild(circle);
+          circles.push(circle);
+        }
+  
+        // Change colors at regular intervals
+        setInterval(() => {
+          circles.forEach(circle => {
+            circle.style.backgroundColor = getRandomColor();
+          });
+        }, 2000); // Change color every 2 seconds (you can adjust the interval)
+      }
+  
+      // Function to generate a random color
+      function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+  
+      // Function to create falling snowflakes
+      function createSnowflakes() {
+        const snowflakes = document.querySelector('.snowflakes');
+  
+        for (let i = 0; i < 10; i++) { // Create 50 snowflakes, change the number as desired
+          const snowflake = document.createElement('div');
+          snowflake.classList.add('snowflake');
+          snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+          snowflake.style.animationDuration = `${Math.random() * 5 + 3}s`; // Vary animation duration
+          snowflakes.appendChild(snowflake);
+        }
+      }
+  
+      // Call functions when the page loads
+      window.onload = function() {
+        createCircles();
+        createSnowflakes();
+      };
+      function createShootingStars() {
+        const shootingStarsContainer = document.querySelector('.shooting-stars');
+  
+        for (let i = 0; i < 10; i++) { // Create 10 shooting stars, change the number as desired
+          const shootingStar = document.createElement('div');
+          shootingStar.classList.add('shooting-star');
+          shootingStar.style.left = `${Math.random() * window.innerWidth}px`;
+          shootingStar.style.top = `${Math.random() * window.innerHeight}px`;
+          shootingStar.style.animationDuration = `${Math.random() * 5 + 5}s`; // Vary animation duration
+          shootingStarsContainer.appendChild(shootingStar);
+        }
+      }
+  
+      window.onload = function() {
+        createCircles();
+        createSnowflakes();
+        createShootingStars();
+      };
+      
+    </script>
+    </body>
+  </html>
+  
